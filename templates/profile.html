@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Profile</title>
+{% endblock %}
+
+{% block content %}
+    <div class="text-center mb-4 mt-4">
+        <h1 class="display-4">Hi, {% if 'username' in session %}{{ session['username'] }}{% else %}Guest{% endif %}!</h1>
+    </div>
+
+    <hr>
+    <div class="mb-4">
+        <h2 class="display-4">Profile Information</h2>
+    </div>
+
+    <div class="container">
+        <form action="/update_profile" method="POST" enctype="multipart/form-data">
+            <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                    <img src="{{ url_for('static', filename='profile_pictures/default.jpg') }}" alt="Logo" width="150" height="150" class="d-inline-block align-text-top">
+                </div>
+                <div class="col">
+                    <label for="username" class="form-label">Change username:</label>
+                    <input type="text" class="form-control" id="username" name="username" value="{% if 'username' in session %}{{ session['username'] }}{% endif %}">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="picture" class="form-label">Change profile picture:</label>
+                <input type="file" class="form-control" id="picture" name="picture">
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Confirm Password:</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1 class="display-4 mt-4 text-center">Welcome to the CoinValueTracker</h1>
+            
+    <div class="container" style="padding-bottom: 10px;">
+
+        <div class="container mt-4">
+            <p class="text-center">
+                This website provides comprehensive information about various cryptocurrencies.
+                It is built using the Flask web framework, SQLAlchemy for database management, and Bootstrap for responsive and visually appealing UI design.
+            </p>
+        </div>
+
+        <div class="my-5">
+            <div class="text-center mb-4">
+                <h1 class="display-4">Media</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <img src="{{ url_for('static', filename='images/picture1.png') }}" alt="Picture 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="{{ url_for('static', filename='images/picture1.png') }}" alt="Picture 2" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="{{ url_for('static', filename='images/picture1.png') }}" alt="Picture 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="display-4">Meme Tokens</h2>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#tab1" data-bs-toggle="tab">Dogecoin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab2" data-bs-toggle="tab">Shiba Inu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab3" data-bs-toggle="tab">Pepe</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-3">
+            <div class="tab-pane fade show active border rounded shadow p-3" id="tab1">
+                <h4>Dogecoin</h4>
+                <p>
+                    Dogecoin is a cryptocurrency that originated as a meme, featuring the popular Shiba Inu dog. 
+                    It was created in 2013 with a lighthearted and fun approach. Despite its origins, 
+                    Dogecoin has gained significant popularity and a dedicated community. 
+                    It operates on a decentralized network and utilizes a unique algorithm for mining. Dogecoin has been known for its 
+                    charitable initiatives and has experienced both price surges and fluctuations in value.</p>
+            </div>
+            <div class="tab-pane fade border rounded shadow p-3" id="tab2">
+                <h4>Shiba Inu coin</h4>
+                <p>
+                    Shiba Inu coin, also known as SHIB, is a cryptocurrency inspired by the Shiba Inu dog breed. 
+                    It gained attention in 2021 as a meme token and quickly gained a large following. 
+                    SHIB operates on the Ethereum blockchain and aims to become the "Dogecoin killer." 
+                    It features a decentralized ecosystem and offers incentives for holders through staking and token burns.
+                    However, it's important to note that SHIB carries high risks and volatility due to its speculative nature
+                    and the overall cryptocurrency market.</p>
+            </div>
+            <div class="tab-pane fade border rounded shadow p-3" id="tab3">
+                <h4>PEPE</h4>
+                <p>
+                    The PEPE memecoin was launched towards the middle of April 2023, with the first entry point 
+                    on Etherscan being April 18th.Less than three weeks later, the cryptocurrency had a market cap of over $420 million,
+                    venturing into the list of the top 100 coins by means of total market capitalization.</p>
+            </div>
+        </div>
+        
+        <div class="container mt-5">
+            <div class="text-center mb-4">
+                <h1 class="display-4">Code Information</h2>
+            </div>
+            <p class="text-center">This website was created for educational purposes by Giorgi Tarsaidze. Feel free to explore the code and learn from it.</p>
+        </div>
+        
+
+    </div>
+{% endblock %}
