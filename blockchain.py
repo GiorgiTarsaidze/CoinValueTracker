@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import LargeBinary
 from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
