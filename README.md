@@ -8,7 +8,7 @@ This is a Flask web application that allows users to register, log in, view cryp
 Bootstrap is used for visual elements.
 
 ## Video Demo
-**to be done**
+https://youtu.be/LNPvPJb_LDM
 ## Features
 
 - User registration and login system
@@ -48,8 +48,14 @@ This feature enhances the user experience by providing a dynamic search function
 When a user types in the search input field, the JavaScript code filters the table rows based on the entered search term.
 The table rows that match the search term are displayed, while the others are hidden.
 
-## Requirement
-**to be done**
+## Requirements
+- Python 3.11
+- Flask
+- Flask SQLAlchemy
+- Beautiful Soup 4
+- requests
+- datetime
+
 ## Installation
 
 1. Clone the repository:
